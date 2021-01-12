@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'katalonstudio/katalon'
+            label 'my-defined-label'
             args "-u root"
         }
     }
