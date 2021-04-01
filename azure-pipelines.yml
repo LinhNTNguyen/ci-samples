@@ -10,8 +10,8 @@ pool:
   vmImage: 'ubuntu-16.04'
 
 steps:
-- script: docker build -t katalonstudio/katalon .
-  displayName: 'Pull katalon studio images'
+- script: docker build -t Dockerfile .
+  displayName: 'Pull dockerfile'
 - script: docker run -t --rm -v "$(pwd)":/katalon/katalon/source katalonstudio/katalon katalon-execute.sh -browserType="Chrome (headless)" -retry=0 -statusDelay=15 -testSuiteCollectionPath="Test Suites/TS_RegressionTestCollection" -apiKey="1a76271f-d2c0-4079-b892-98e59860ebcf" -sendMail="nguyennngoctolinh@gmail.com" --config -webui.autoUpdateDrivers=true
   displayName: 'Runnning Katalon TS_RegressionTestCollection'
 - task: PublishPipelineArtifact@0
