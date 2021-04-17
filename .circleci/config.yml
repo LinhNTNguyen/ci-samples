@@ -7,4 +7,4 @@ workflows:
     jobs:
         - katalon-studio/run:
                 version: "latest"
-                command_arguments: '-browserType="Chrome" -retry=2 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+                command_arguments: '-browserType="Chrome" -retry=2 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest" -apikey="1a76271f-d2c0-4079-b892-98e59860ebcf"'
